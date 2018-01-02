@@ -18,21 +18,23 @@ class Blink extends Component {
 
 export default class App extends Component {
   render() {
-    let pic = {
-      uri: 'https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=2850&q=80'
-    };
+    const { viewStyle, navbar, main, footer } = styles;
     return (
-      <View style={{flex: 1}}>
-        <View style={styles.navbar} />
-        <Text style={styles.text}>Hello</Text>
-        <View style={styles.main} />
-        <View style={styles.footer} />
+      <View style={viewStyle}>
+        <View style={navbar}/> 
+        <View style={main}>
+          <Text style={{fontSize: 30}}>Hey</Text>
+        </View>
+        <View style={footer} />
       </View>
     );
   }
-}
+};
 
-const styles = StyleSheet.create({
+const styles = {
+  viewStyle: {
+    flex: 1
+  },
   text: {
     color: 'black'
   },
@@ -48,4 +50,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'steelblue'
   }
-});
+};
